@@ -45,11 +45,8 @@ INSTALLED_APPS = [
     "filemanager.apps.FilemanagerConfig",
     "django_extensions",
     # third party apps
-    "crispy_forms",
-    "crispy_bootstrap5",
 ]
 
-CRISPY_TEMPLATE_PACK = "bootstrap"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
