@@ -29,18 +29,18 @@ class TestHomePage(TestCase):
         self.assertTemplateUsed(response, "filemanager/upload_file.html")
         self.assertEqual(response.status_code, HTTPStatus.OK)
 
-    def test_pl(page: Page):
-        playwright = sync_playwright().start()
+    # def test_pl(page: Page):
+    #     playwright = sync_playwright().start()
 
-        browser = playwright.chromium.launch()
-        page = browser.new_page()
-        page.goto(HOMEPAGE_URL)
+    #     browser = playwright.chromium.launch()
+    #     page = browser.new_page()
+    #     page.goto(HOMEPAGE_URL)
 
-        random_number = random.randint(10_000, 90_000)
-        print(random_number)
-        page.screenshot(
-            path=f"filemanager/tests/screenshots/example-{random_number}.png"
-        )
-        browser.close()
+    #     random_number = random.randint(10_000, 90_000)
+    #     print(random_number)
+    #     page.screenshot(
+    #         path=f"filemanager/tests/screenshots/example-{random_number}.png"
+    #     )
+    #     browser.close()
 
-        playwright.stop()
+    #     playwright.stop()

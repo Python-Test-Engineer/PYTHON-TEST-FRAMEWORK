@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-_cq#vd%(-x7plffwmuxcx=%_=pkb^w*nzuti^h%61c87#!3tzt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["yourdomain.com", "127.0.0.1", "noaddress.com"]
 
 # AUTH_USER_MODEL = "authuser.User"
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "posts.apps.PostsConfig",
     "orm.apps.OrmConfig",
     "filemanager.apps.FilemanagerConfig",
+    "store.apps.StoreConfig",
     "django_extensions",
     # third party apps
 ]
