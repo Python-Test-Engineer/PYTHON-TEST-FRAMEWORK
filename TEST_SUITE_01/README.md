@@ -15,7 +15,7 @@
 - The **tests** folder is where devs place their tests and contains templates.
 - The **pytest.ini** folder is the first configuration file where test_suite options can be stored. Not used programatically in TEST_SUITE_01. **utils/myconfigparser.py** reads this file.
 - Custom logger format etc in pytest.ini
-- There are a number of test templates from various sources and include a wide range of PyTest features as well as a sectiion on MOCKING, (05_mocks).
+- There are a number of test templates from various sources and include a wide range of PyTest features as well as a sectiion on MOCKING, (05_mocks_patch).
 - Acknowledgements and links to YT videos and other resources are cited.
 
 ## To set up
