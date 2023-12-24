@@ -1,4 +1,4 @@
-# Django Testing
+# Django Testing Framework
 
 ## REFERENCES
 
