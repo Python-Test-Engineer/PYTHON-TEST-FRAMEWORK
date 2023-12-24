@@ -45,9 +45,7 @@
 - cd TEST_SUITE_01
 - create virtual env (python -m venv venv then activate .\venv\Scripts\activate for Windows).
 - `python -m pip install -r requirements_TEST_SUITE_01.txt`
-- dont forget *playwright install* as this loads browsers etc for Playwright.
 - `python -m pytest` - this will ensure all paths are found if *pytest* itself does not work.
-- `python -m pytest --headed` to see browsers for playwright and you can use the --headed when running all tests. Playwright default is headless.
 
 ## About
 
@@ -61,7 +59,7 @@
 
 # TEST_SUITE_02 status: RC Beta
 
-- all of TEST_SUITE_01 plus API testing.
+- all of TEST_SUITE_01 plus Playwright and API testing.
 
 # TEST_SUITE_03 status: NOT INCLUDED JUST YET
 
@@ -71,8 +69,6 @@
 
 - all of TEST_SUITE_03 with the addition of property based testing.
 
-# TEST_SUITE_DJANGO_CORE: status: Alpha
+# TEST_SUITE_DJANGO: status: Alpha
 
 ### A simple Django site with unittest, pytest-django and e2e Playwright testing.
-
-# TEST_SUITE_DJANGO: status: archived and will be deleted

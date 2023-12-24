@@ -19,11 +19,11 @@ class PostCreationTest(TestCase):
         self.body = "Sample body for the sample text"
 
         User.objects.create_user(
-            username="testuser", email="testuser@app.com", password="testpassword123##"
+            username="admin", email="admin@test.com", password="password2024"
         )
 
     def test_post_creation_page_exists(self):
-        self.client.login(username="testuser", password="testpassword123##")
+        self.client.login(username="admin", password="password2024")
         response = self.client.get(self.url)
 
         self.assertEqual(response.status_code, HTTPStatus.OK)
@@ -60,5 +60,5 @@ class PostCreationTest(TestCase):
 
         self.assertEqual(response.status_code, HTTPStatus.FOUND)
         self.assertRedirects(
-            response, expected_url="/accounts/login/?next=/create_post/"
+            response, expected_url="/accounts/login/?next=/posts/create_post/"
         )
