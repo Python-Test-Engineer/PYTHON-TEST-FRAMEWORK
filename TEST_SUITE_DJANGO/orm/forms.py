@@ -1,7 +1,7 @@
 from django import forms
 from django.core.validators import MaxValueValidator, MinValueValidator
 
-from core.models import Restaurant
+from orm.models import Restaurant
 
 
 class RestaurantForm(forms.ModelForm):
