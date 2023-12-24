@@ -19,13 +19,13 @@ class MyViewTests(StaticLiveServerTestCase):
         cls.browser.close()
         cls.playwright.stop()
 
-    def test_login(self):
+    def test_pl_login(self):
         page = self.browser.new_page()
         page.goto(f"{self.live_server_url}/admin/")
         page.wait_for_selector("text=Django administration")
         page.fill("[name=username]", "admin@test.com")
         page.fill("[name=password]", "password")
-
+        print("PLAYWRIGHT ---> test_pl_login")
         page.click("text=Log in")
         assert len(page.eval_on_selector(".errornote", "el => el.innerText")) > 0
         page.close()

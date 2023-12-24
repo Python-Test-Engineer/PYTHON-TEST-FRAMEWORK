@@ -1,2 +1,4 @@
-2023-12-24 17:53:13 [   DEBUG] [asyncio] Using proactor: IocpProactor (proactor_events.py:634)
-2023-12-24 17:53:14 [ WARNING] [django.request] Not Found: /favicon.ico (log.py:241)
+2023-12-24 18:03:21 [   DEBUG] [asyncio] Using proactor: IocpProactor (proactor_events.py:634)
+2023-12-24 18:03:23 [ WARNING] [django.request] Not Found: /favicon.ico (log.py:241)
+2023-12-24 18:03:24 [   DEBUG] [asyncio] Using proactor: IocpProactor (proactor_events.py:634)
+2023-12-24 18:03:25 [ WARNING] [django.request] Not Found: /favicon.ico (log.py:241)
