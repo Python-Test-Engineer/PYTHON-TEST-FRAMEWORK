@@ -37,16 +37,6 @@
 
 # TEST_SUITE_01 status: RC Alpha
 
-## Installation
-
-- git clone repo
-- cd TEST_SUITE_01
-- install instructions in README.md gut are:
-- cd TEST_SUITE_01
-- create virtual env (python -m venv venv then activate .\venv\Scripts\activate for Windows).
-- `python -m pip install -r requirements_TEST_SUITE_01.txt`
-- `python -m pytest` - this will ensure all paths are found if *pytest* itself does not work.
-
 ## About
 
 - This is the foundation test suite that contains templates for PyTest and Playwright/Selenium. 

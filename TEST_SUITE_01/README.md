@@ -18,12 +18,13 @@
 - There are a number of test templates from various sources and include a wide range of PyTest features as well as a sectiion on MOCKING, (05_mocks_patch).
 - Acknowledgements and links to YT videos and other resources are cited.
 
-## To set up
+## Installation
 
+- git clone repo
+- cd TEST_SUITE_01
+- install instructions in README.md gut are:
 - cd TEST_SUITE_01
 - create virtual env (python -m venv venv then activate .\venv\Scripts\activate for Windows).
-- pip install -r requirements_TEST_SUITE_01.txt
-- dont forget *playwright install* as this loads browsers etc for Playwright.
-- *python -m pytest* - this will ensure all paths are found if *pytest* itself does not work.
-- *python -m pytest --headed* to see browsers for playwright and you can use the --headed when running all tests. Playwright default is headless.
+- `python -m pip install -r requirements_TEST_SUITE_01.txt`
+- `python -m pytest` - this will ensure all paths are found if *pytest* itself does not work.
 
