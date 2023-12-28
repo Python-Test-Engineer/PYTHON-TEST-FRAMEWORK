@@ -1,25 +1,46 @@
+"""CRUD methods"""
+
 import pytest
-from playwright.sync_api import *
+from playwright.sync_api import Playwright, APIRequestContext
 
 
 @pytest.fixture
 def api_context(playwright: Playwright) -> APIRequestContext:
+    """
+    Create an API context using Playwright.
+
+    Args:
+        playwright (Playwright): The Playwright instance.
+
+    Returns:
+        APIRequestContext: The APIRequestContext object.
+
+    Raises:
+        None.
+
+    Examples:
+        >>> api_context = api_context(playwright)
+    """
     api_context = playwright.request.new_context(
         base_url="https://dummyjson.com",
-        extra_http_headers={'Content-Type': 'application/json'},
+        extra_http_headers={"Content-Type": "application/json"},
     )
     yield api_context
     api_context.dispose()
 
 
 def test_create_user(api_context: APIRequestContext):
+    """
+    Creates a new user by sending a POST request to the "users/add" endpoint of the API.
+
+    Args:
+        api_context (APIRequestContext): An instance of the APIRequestContext class.
+
+    Returns:
+        None
+    """
     response = api_context.post(
-        "users/add",
-        data={
-            "firstName": "Damien",
-            "lastName": "Smith",
-            "age": 27
-        }
+        "users/add", data={"firstName": "Damien", "lastName": "Smith", "age": 27}
     )
     user_data = response.json()
 
@@ -29,7 +50,7 @@ def test_create_user(api_context: APIRequestContext):
 
 def test_update_user(api_context: APIRequestContext):
     # print(
-    #   "Default Last Name:", 
+    #   "Default Last Name:",
     #   api_context.get("users/1").json()["lastName"]
     # )
 
@@ -38,7 +59,7 @@ def test_update_user(api_context: APIRequestContext):
         data={
             "lastName": "Smith",
             "age": 20,
-        }
+        },
     )
     user_data = response.json()
 

@@ -1,12 +1,21 @@
+"""User Search API"""
+
 import pytest
-from playwright.sync_api import *
+from playwright.sync_api import Playwright, APIRequestContext
 
 
 @pytest.fixture
 def api_context(playwright: Playwright) -> APIRequestContext:
-    api_context = playwright.request.new_context(
-        base_url="https://dummyjson.com"
-    )
+    """
+    Fixture function that returns an APIRequestContext object.
+
+    :param playwright: The playwright object used to create the context.
+    :type playwright: Playwright
+
+    :return: The APIRequestContext object.
+    :rtype: APIRequestContext
+    """
+    api_context = playwright.request.new_context(base_url="https://dummyjson.com")
     yield api_context
     api_context.dispose()
 

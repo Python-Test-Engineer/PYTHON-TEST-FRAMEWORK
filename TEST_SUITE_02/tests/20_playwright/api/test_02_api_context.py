@@ -1,10 +1,19 @@
+"""API Context """
+
 from playwright.sync_api import *
 
 
 def test_users_api(playwright: Playwright):
-    api_context = playwright.request.new_context(
-        base_url="https://dummyjson.com"
-    )
+    """
+    Function to test the users API.
+
+    Parameters:
+    - playwright: A Playwright object representing the playwright instance.
+
+    Returns:
+    None
+    """
+    api_context = playwright.request.new_context(base_url="https://dummyjson.com")
 
     response = api_context.get("/users/1")
 

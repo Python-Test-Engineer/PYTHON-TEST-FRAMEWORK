@@ -1,3 +1,5 @@
+""" Mock API """
+
 from playwright.sync_api import Route, Page
 
 
