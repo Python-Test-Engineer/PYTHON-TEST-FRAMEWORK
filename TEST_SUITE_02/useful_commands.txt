@@ -10,6 +10,7 @@ python -m pip install -r requirements.txt
 
 GIT
 
+
 git rm -r --cached .
 
 git remote remove origin
