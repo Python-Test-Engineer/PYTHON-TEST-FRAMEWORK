@@ -1,18 +1,7 @@
-""" Mock API """
-
-from playwright.sync_api import Route, Page
+from playwright.sync_api import *
 
 
 def on_api_call(route: Route):
-    """
-    Perform an API call and modify the user data.
-
-    Args:
-        route (Route): The route object representing the API call.
-
-    Returns:
-        None
-    """
     response = route.fetch()
     user_data = response.json()
 
