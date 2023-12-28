@@ -9,6 +9,7 @@
    <img src="./_images/pytest-bdd.png" width="75" height="75" >
    <img src="./_images/py-behave.png" width="75" height="75" >
 </div> -->
+## Documentation is available at: [https://python-test-engineer.github.io/](https://python-test-engineer.github.io/)
 
 ## PyTest - Playwright - Django - BDD - Hypothesis 
 
@@ -20,4 +21,3 @@
 
 ### I have collated them into fully integrated tests suites that have a straight forward set up and 150+ test templates, including mocking and patching.
 
-# Documentation is available at: [https://python-test-engineer.github.io/](https://python-test-engineer.github.io/)
