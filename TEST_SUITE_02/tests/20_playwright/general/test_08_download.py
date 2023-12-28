@@ -8,9 +8,7 @@ def on_download(download):
 
 
 with sync_playwright() as playwright:
-    browser = playwright.chromium.launch(
-        headless=False, slow_mo=200
-    )
+    browser = playwright.chromium.launch(headless=False, slow_mo=200)
     page = browser.new_page()
     page.goto("https://unsplash.com/photos/NDRwHCC7JuI")
 
@@ -20,12 +18,11 @@ with sync_playwright() as playwright:
     btn = page.get_by_role("link", name="Download free")
 
     # expect download
-    with page.expect_download() as download_info:
+    with page.expect_download() as download:
         # trigger download
         btn.click()
-
-    # Save using download_info
-    # download = download_info.value
-    # download.save_as("moon.jpg")
+        # Save using download
+        download = download.value
+        download.save_as(f"./screenshots/{download.suggested_filename}")
 
     browser.close()
