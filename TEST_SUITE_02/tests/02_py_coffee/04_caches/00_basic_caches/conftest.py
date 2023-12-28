@@ -1,6 +1,7 @@
 """conftest.py is a file that pytest will automatically import fixtures from """
 
 import random
+from typing import Any
 
 import pytest
 
@@ -14,7 +15,7 @@ def expensive_computation() -> int:
 # A simple fixture that generates some inputs
 # This uses the special request fixture that we can use to access the cache
 @pytest.fixture
-def expensive_value(request):
+def expensive_value(request: Any):
     """Doc"""
     # Try and get the value from the cache
     value = request.config.cache.get("expensive_value", None)

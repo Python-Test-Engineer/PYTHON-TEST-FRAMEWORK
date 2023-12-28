@@ -25,13 +25,13 @@ class TestClass:
     num = 5
 
     # Test squaring of a number
-    def test_square(self):
+    def test_square(self) -> None:
         """Doc"""
         result = square(self.num)
         assert result == self.num**2
 
     # Test cubing of a number
-    def test_cube(self):
+    def test_cube(self) -> None:
         """Doc"""
         result = cube(self.num)
         assert result == self.num**3

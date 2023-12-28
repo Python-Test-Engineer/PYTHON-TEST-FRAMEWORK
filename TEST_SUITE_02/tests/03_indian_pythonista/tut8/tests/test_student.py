@@ -1,4 +1,4 @@
-from datetime import datetime
+"""Test"""
 
 import pytest
 from tut8.myapp.student import is_eligible_for_degree

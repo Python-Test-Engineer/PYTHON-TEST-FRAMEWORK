@@ -1,9 +1,10 @@
-from datetime import datetime
+"""Test"""
 
 from tut7.myapp.student import get_topper
 
 
 def test_get_topper(make_dummy_student):
+    """docstring"""
     students = [
         make_dummy_student("ram", 21),
         make_dummy_student("shyam", 19),
