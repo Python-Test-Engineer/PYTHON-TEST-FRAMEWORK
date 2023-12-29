@@ -11,7 +11,7 @@ def square(num: int) -> int:
 
 
 # A single test marked with xfail (we expect the test to fail)
-def test_square():
+def test_square() -> None:
     """Doc"""
     pytest.xfail()
     num = 5

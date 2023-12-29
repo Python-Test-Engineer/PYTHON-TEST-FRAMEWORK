@@ -16,7 +16,7 @@ def square(num: int) -> int:
 @pytest.mark.xfail(
     sys.version_info > (3, 6), reason="Test requires Python version <= 3.6!"
 )
-def test_square():
+def test_square() -> None:
     """Doc"""
     num = 5
     result = square(num)

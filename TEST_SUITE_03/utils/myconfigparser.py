@@ -1,4 +1,4 @@
-"""Read pytest.ini"""
+"""Reads ini files in config folder"""
 
 import configparser
 from pathlib import Path

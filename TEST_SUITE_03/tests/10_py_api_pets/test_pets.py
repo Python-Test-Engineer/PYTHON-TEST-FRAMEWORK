@@ -1,8 +1,8 @@
 """Testing Pets API"""
 
-from typing import Any
 import logging
 
+import pytest
 
 from utils.api_utils import delete_data, get_api_data, put_data
 from utils.myconfigparser import get_pet_api_url
@@ -22,7 +22,7 @@ PET_ID = "200"
 # test post a pet
 def test_post_pet() -> None:
     """Testing PUT"""
-    payload: Any = {"id": int(PET_ID), "name": "LEO", "status": "pending"}
+    payload = {"id": int(PET_ID), "name": "LEO", "status": "pending"}
     data, __, __ = put_data(basebase_url, payload)
     LOGGER.info("API call done")
     assert data["id"] == int(PET_ID)
@@ -41,7 +41,7 @@ def test_get_pet_by_id() -> None:
 # test updating a pet
 def test_update_pet() -> None:
     """Testing PUT"""
-    payload: Any = {"id": int(PET_ID), "name": "LEO", "status": "pending"}
+    payload = {"id": int(PET_ID), "name": "LEO", "status": "pending"}
     data, __, __ = put_data(basebase_url, payload)
     LOGGER.info("API call done")
     assert data["id"] == int(PET_ID)
@@ -53,7 +53,7 @@ def test_update_pet() -> None:
 def test_delete_delete_pet_by_id() -> None:
     """Testing DELETE"""
     url = basebase_url + PET_ID
-    api_key: Any = {"api_key": "apiKeys123"}
+    api_key = {"api_key": "apiKeys123"}
     data, __, __ = delete_data(url, api_key)
     print(data)
     assert data["message"] == PET_ID
