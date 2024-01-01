@@ -1,6 +1,6 @@
 """Tests for Pets API"""
 
-import requests 
+import requests
 
 from utilities.boxen import bx_info, bx_result
 from utilities.resources import ApiResources
