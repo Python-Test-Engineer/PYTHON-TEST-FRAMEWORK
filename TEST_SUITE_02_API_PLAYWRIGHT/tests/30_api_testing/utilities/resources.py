@@ -1,4 +1,8 @@
+"""Central location for urls"""
+
+
 class ApiResources:
-    addBook = '/Library/Addbook.php'
-    deleteBook = '/Library/DeleteBook.php'
-    getBookAuthor = ''
+    BASE_URL_PET_API = "https://petstore.swagger.io/v2/pet"
+    addBook = "/Library/Addbook.php"
+    deleteBook = "/Library/DeleteBook.php"
+    getBookAuthor = ""
