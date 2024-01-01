@@ -1,32 +1,10 @@
 import json
-from pyboxen import boxen
+from utilities.boxen import boxen_info, boxen_result
 import requests
 
 BASE_URL = "https://petstore.swagger.io/v2/pet"
 
 payload = {"id": int(200), "name": "LEO", "status": "pending"}
-
-
-def boxen_result(output, padding=1, margin=1, color="green"):
-    print(
-        boxen(
-            output,
-            padding=padding,
-            margin=margin,
-            color=color,
-        )
-    )
-
-
-def boxen_info(info, padding=1, margin=1, color="blue"):
-    print(
-        boxen(
-            info,
-            padding=padding,
-            margin=margin,
-            color=color,
-        )
-    )
 
 
 def test_post_pet() -> None:
