@@ -4,7 +4,9 @@
 from pyboxen import boxen
 
 
-def bx_result(message, padding=1, margin=1, color="green") -> None:
+def bx_result(
+    message: str, padding: int = 1, margin: int = 1, color: str = "green"
+) -> None:
     """Green result boxen"""
     print(
         boxen(
@@ -16,7 +18,9 @@ def bx_result(message, padding=1, margin=1, color="green") -> None:
     )
 
 
-def bx_info(message, padding=1, margin=1, color="blue") -> None:
+def bx_info(
+    message: str, padding: int = 1, margin: int = 1, color: str = "blue"
+) -> None:
     """Blue info boxen"""
     print(
         boxen(
@@ -28,7 +32,9 @@ def bx_info(message, padding=1, margin=1, color="blue") -> None:
     )
 
 
-def bx_warn(message, padding=1, margin=1, color="red") -> None:
+def bx_warn(
+    message: str, padding: int = 1, margin: int = 1, color: str = "red"
+) -> None:
     """Blue warning boxen"""
     print(
         boxen(
