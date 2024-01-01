@@ -1,5 +1,0 @@
-2023-11-17 14:16:57 [   DEBUG] [__main__] This is a debug message. (logger.py:35)
-2023-11-17 14:16:57 [    INFO] [__main__] This is an info message. (logger.py:36)
-2023-11-17 14:16:57 [ WARNING] [__main__] This is a warning message. (logger.py:37)
-2023-11-17 14:16:57 [   ERROR] [__main__] This is an error message. (logger.py:38)
-2023-11-17 14:16:57 [CRITICAL] [__main__] This is a critical message. (logger.py:39)
