@@ -8,6 +8,7 @@ payload = {"id": int(200), "name": "LEO", "status": "pending"}
 
 
 def test_post_pet() -> None:
+    """Test post api works"""
     boxen_info("getting data from api...")
     add_pet_response = requests.post(
         BASE_URL,
@@ -15,8 +16,12 @@ def test_post_pet() -> None:
         headers={"Content-Type": "application/json"},
     )
 
-    output = str(add_pet_response.json())
+    response_json = add_pet_response.json()  # json.loads(add_pet_response.json())
+    response_status = str(response_json["status"]).upper()
+    response_id = str(response_json["id"]).upper()
+    response_name = str(response_json["name"]).upper()
+    boxen_result(str(response_json))
 
-    boxen_result(output)
-
-    assert True
+    assert (
+        response_id == "200" and response_name == "LEO" and response_status == "PENDING"
+    )
