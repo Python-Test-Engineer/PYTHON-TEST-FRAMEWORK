@@ -35,7 +35,7 @@ def bx_info(
 def bx_warn(
     message: str, padding: int = 1, margin: int = 1, color: str = "red"
 ) -> None:
-    """Blue warning boxen"""
+    """Red warning boxen"""
     print(
         boxen(
             message,
