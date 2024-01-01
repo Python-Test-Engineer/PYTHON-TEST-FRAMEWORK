@@ -1,6 +1,6 @@
 import json
 
-from utilities.boxen import bx_info, bx_result
+from boxen import bx_info, bx_result
 
 courses = '{"name": "RahulShetty","languages": [ "Java", "Python"]}'
 
@@ -16,7 +16,7 @@ print(dict_courses["languages"][0])
 
 print("+++++++++++++++++++++++++++++++++")
 
-with open("./data/courses.json") as f:
+with open("../data/courses.json") as f:
     data = json.load(f)
     print(data)
     print(type(data))
