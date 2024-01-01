@@ -2,8 +2,9 @@
 #  https://www.youtube.com/watch?v=ZLeNbmpx7cc
 import unittest
 from unittest.mock import Mock
-from requests.exceptions import Timeout
+
 import pytest
+from requests.exceptions import Timeout
 
 cx_Oracle = Mock()
 

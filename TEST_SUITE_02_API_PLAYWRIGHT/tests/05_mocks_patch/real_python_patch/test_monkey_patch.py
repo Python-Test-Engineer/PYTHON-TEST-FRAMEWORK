@@ -1,7 +1,8 @@
 import unittest
+from unittest.mock import patch
+
 from real_python_patch import get_holidays
 from requests.exceptions import Timeout
-from unittest.mock import patch
 
 
 class TestCalendar(unittest.TestCase):

@@ -1,8 +1,7 @@
 import unittest
-from mock import Mock
-
 
 import short_tweeter
+from mock import Mock
 
 
 class TweetTest(unittest.TestCase):

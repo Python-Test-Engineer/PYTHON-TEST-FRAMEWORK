@@ -8,9 +8,7 @@ def test_dynamic_id(page: Page):
     primary_btn = page.locator("button.btn-primary")
 
     # xpath
-    primary_btn = page.locator(
-        "//button[ contains(@class, 'btn-primary') ]"
-    )
+    primary_btn = page.locator("//button[ contains(@class, 'btn-primary') ]")
 
     expect(primary_btn).to_be_visible()
 

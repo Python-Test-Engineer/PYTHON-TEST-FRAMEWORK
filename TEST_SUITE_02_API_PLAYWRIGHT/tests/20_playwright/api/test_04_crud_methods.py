@@ -1,7 +1,7 @@
 """CRUD methods"""
 
 import pytest
-from playwright.sync_api import Playwright, APIRequestContext
+from playwright.sync_api import APIRequestContext, Playwright
 
 
 @pytest.fixture

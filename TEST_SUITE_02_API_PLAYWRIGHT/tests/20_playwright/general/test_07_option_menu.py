@@ -3,9 +3,9 @@ from playwright.sync_api import Page, expect
 
 def test_app(page: Page):
     page.goto("https://bootswatch.com/default")
-    
+
     option_menu = page.get_by_label("Example select")
-    
+
     # expect selected option
     expect(option_menu).to_have_value("1")
 

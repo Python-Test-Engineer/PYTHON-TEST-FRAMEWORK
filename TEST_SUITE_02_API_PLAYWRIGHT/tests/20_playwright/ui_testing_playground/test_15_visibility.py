@@ -1,5 +1,5 @@
 import pytest
-from playwright.sync_api import Page, expect, TimeoutError
+from playwright.sync_api import Page, TimeoutError, expect
 
 
 def test_visibility(page: Page):

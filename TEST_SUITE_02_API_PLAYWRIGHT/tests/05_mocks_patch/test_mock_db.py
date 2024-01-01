@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-
 # type: ignore
 #  https://www.youtube.com/watch?v=ZLeNbmpx7cc
 import unittest

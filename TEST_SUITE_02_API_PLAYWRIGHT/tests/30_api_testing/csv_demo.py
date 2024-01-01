@@ -1,7 +1,7 @@
 import csv
 
-with open('utilities/loanapp.csv') as csvFile:
-    csvReader = csv.reader(csvFile, delimiter=',')
+with open("utilities/loanapp.csv") as csvFile:
+    csvReader = csv.reader(csvFile, delimiter=",")
     # print(csvReader)
     # print(list(csvReader))
     names = []
@@ -12,14 +12,10 @@ with open('utilities/loanapp.csv') as csvFile:
 
 print(names)
 print(stats)
-Index = names.index('Joe')
+Index = names.index("Joe")
 loanStatus = stats[Index]
-print(' loan status is '+loanStatus)
+print(" loan status is " + loanStatus)
 
-with open('utilities/loanapp.csv','a') as wFile:
+with open("utilities/loanapp.csv", "a") as wFile:
     write = csv.writer(wFile)
-    write.writerow(["Bob","rejected"])
-
-
-
-
+    write.writerow(["Bob", "rejected"])

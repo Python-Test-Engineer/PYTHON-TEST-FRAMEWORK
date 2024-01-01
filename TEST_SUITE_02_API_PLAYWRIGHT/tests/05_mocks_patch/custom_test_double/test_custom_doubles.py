@@ -2,8 +2,8 @@
 
 import unittest
 
-from .doubles import AppTestDouble
 from .app import AppClient
+from .doubles import AppTestDouble
 
 
 class TestApp(unittest.TestCase):

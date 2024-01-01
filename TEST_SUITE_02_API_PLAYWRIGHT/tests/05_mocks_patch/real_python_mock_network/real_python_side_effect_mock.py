@@ -1,6 +1,7 @@
-import requests
 import unittest
 from unittest.mock import Mock
+
+import requests
 
 # Mock requests to control its behavior
 requests = Mock()

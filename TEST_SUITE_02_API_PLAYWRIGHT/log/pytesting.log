@@ -1,2 +1,2 @@
-2024-01-01 16:48:18 [   DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): petstore.swagger.io:443 (connectionpool.py:1053)
-2024-01-01 16:48:19 [   DEBUG] [urllib3.connectionpool] https://petstore.swagger.io:443 "POST /v2/pet HTTP/1.1" 200 None (connectionpool.py:547)
+2024-01-01 16:51:19 [   DEBUG] [urllib3.connectionpool] Starting new HTTPS connection (1): petstore.swagger.io:443 (connectionpool.py:1053)
+2024-01-01 16:51:20 [   DEBUG] [urllib3.connectionpool] https://petstore.swagger.io:443 "POST /v2/pet HTTP/1.1" 200 None (connectionpool.py:547)

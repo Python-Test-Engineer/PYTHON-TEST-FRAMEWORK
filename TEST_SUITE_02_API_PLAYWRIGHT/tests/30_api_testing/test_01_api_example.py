@@ -1,22 +1,19 @@
 """Tests for Pets API"""
 
+import requests 
 
-import json
 from utilities.boxen import bx_info, bx_result
 from utilities.resources import ApiResources
-import requests
 
+URL = ApiResources.BASE_URL_PET_API
 payload = {"id": int(200), "name": "LEO", "status": "pending"}
-
-
-url = ApiResources.BASE_URL_PET_API
 
 
 def test_post_pet() -> None:
     """Test post api works"""
     bx_info("getting data from api...")
     add_pet_response = requests.post(
-        url,
+        URL,
         json=payload,
         headers={"Content-Type": "application/json"},
     )

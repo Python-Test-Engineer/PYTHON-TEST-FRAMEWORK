@@ -13,6 +13,8 @@ def test_get_started_link(page: Page):
     expect(dropdown_menu).to_contain_text(".NET")
 
     # exact text
-    heading  = page.locator("h1.hero__title")
+    heading = page.locator("h1.hero__title")
 
-    expect(heading).to_have_text("Playwright enables reliable end-to-end testing for modern web apps.")
+    expect(heading).to_have_text(
+        "Playwright enables reliable end-to-end testing for modern web apps."
+    )

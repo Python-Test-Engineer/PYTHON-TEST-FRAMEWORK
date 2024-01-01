@@ -1,5 +1,6 @@
 """Twitter"""
 import os
+
 import twitter  # pip install python-twitter
 
 URL = "http://miketwo.net/learn/mocks"

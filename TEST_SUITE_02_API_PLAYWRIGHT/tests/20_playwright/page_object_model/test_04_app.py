@@ -1,5 +1,5 @@
-from playwright_page import PlaywrightPage
 from playwright.sync_api import Page, expect
+from playwright_page import PlaywrightPage
 
 
 def test_docs_link(page: Page):

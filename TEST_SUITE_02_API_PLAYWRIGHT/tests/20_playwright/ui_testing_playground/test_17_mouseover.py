@@ -3,7 +3,7 @@ from playwright.sync_api import Page, expect
 
 def test_mouse_over(page: Page):
     page.goto("http://uitestingplayground.com/mouseover")
-    
+
     link = page.get_by_title("Click me")
     link.hover()
 

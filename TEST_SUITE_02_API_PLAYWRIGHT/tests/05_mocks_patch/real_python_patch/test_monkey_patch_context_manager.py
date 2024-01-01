@@ -1,8 +1,8 @@
 import unittest
-from real_python_patch import get_holidays, requests
-from requests.exceptions import Timeout
 from unittest.mock import patch
 
+from real_python_patch import get_holidays, requests
+from requests.exceptions import Timeout
 
 # autospec=True
 # For ensuring that the mock objects in your tests have the same api as the objects they are replacing, you can use auto-speccing. Auto-speccing can be done through the autospec argument to patch, or the create_autospec() function. Auto-speccing creates mock objects that have the same attributes and methods as the objects they are replacing, and any functions and methods (including constructors) have the same call signature as the real object.

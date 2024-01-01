@@ -8,7 +8,7 @@ def test_get_started_link(page: Page):
 
     link = page.get_by_role("link", name="GET STARTED")
     link.click()
-    
+
     # assert statement
     assert page.url == DOCS_URL
     # expect page url

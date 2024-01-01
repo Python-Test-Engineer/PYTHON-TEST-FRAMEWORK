@@ -1,5 +1,5 @@
 import pytest
-from playwright.sync_api import TimeoutError, Page
+from playwright.sync_api import Page, TimeoutError
 
 
 def test_hidden_layer(page: Page):

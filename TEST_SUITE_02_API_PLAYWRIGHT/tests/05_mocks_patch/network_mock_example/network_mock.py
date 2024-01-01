@@ -1,6 +1,7 @@
 """API"""
 
 from typing import Any
+
 import requests
 
 

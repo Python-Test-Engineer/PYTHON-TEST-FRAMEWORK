@@ -1,7 +1,7 @@
-from unittest import TestCase
 import unittest
+from unittest import TestCase
 
-from robot import Robot, CleaningRobot
+from robot import CleaningRobot, Robot
 
 
 class MockRobot(Robot):

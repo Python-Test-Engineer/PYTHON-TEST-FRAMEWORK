@@ -10,8 +10,8 @@ def test_get_started_link(page: Page):
 
     # search button
     search_btn = page.get_by_role("button", name="Search")
-    search_btn.press("Control+KeyK") 
-    
+    search_btn.press("Control+KeyK")
+
     # input should be visible/editable
     expect(input).to_be_editable()
     # input should be empty initially
