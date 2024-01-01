@@ -1,0 +1,10 @@
+{
+   "courses": {
+      "name": "Rahul Shetty",
+      "languages": [
+         "Java",
+         "Python"
+      ],
+      "age": 25
+   }
+}

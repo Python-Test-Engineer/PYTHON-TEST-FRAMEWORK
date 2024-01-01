@@ -1,12 +1,11 @@
 import configparser
 
-import mysql.connector
-from mysql.connector import Error
+from boxen import bx_info, bx_result
 
 
 def getConfig():
     config = configparser.ConfigParser()
-    config.read("utilities/properties.ini")
+    config.read("./properties.ini")
     return config
 
 
@@ -17,25 +16,5 @@ connect_config = {
     "database": getConfig()["SQL"]["database"],
 }
 
-
-def getPassword():
-    return "Srinath19830G"
-
-
-def getConnection():
-    try:
-        conn = mysql.connector.connect(**connect_config)
-        if conn.is_connected():
-            print("Connection Successful")
-            return conn
-    except Error as e:
-        print(e)
-
-
-def getQuery(query):
-    conn = getConnection()
-    cursor = conn.cursor()
-    cursor.execute(query)
-    row = cursor.fetchone()
-    conn.close()
-    return row
+bx_info(getConfig()["SQL"]["user"])
+bx_info(str(connect_config))
