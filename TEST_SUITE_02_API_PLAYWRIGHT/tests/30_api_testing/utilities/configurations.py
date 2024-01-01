@@ -6,15 +6,15 @@ from mysql.connector import Error
 
 def getConfig():
     config = configparser.ConfigParser()
-    config.read('utilities/properties.ini')
+    config.read("utilities/properties.ini")
     return config
 
 
 connect_config = {
-    'user' : getConfig()['SQL']['user'],
-    'password' : getConfig()['SQL']['password'],
-    'host' : getConfig()['SQL']['host'],
-    'database' :getConfig()['SQL']['database'],
+    "user": getConfig()["SQL"]["user"],
+    "password": getConfig()["SQL"]["password"],
+    "host": getConfig()["SQL"]["host"],
+    "database": getConfig()["SQL"]["database"],
 }
 
 
@@ -39,4 +39,3 @@ def getQuery(query):
     row = cursor.fetchone()
     conn.close()
     return row
-
