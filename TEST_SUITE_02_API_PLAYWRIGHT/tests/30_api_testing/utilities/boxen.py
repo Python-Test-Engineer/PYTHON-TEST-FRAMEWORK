@@ -4,11 +4,11 @@
 from pyboxen import boxen
 
 
-def boxen_result(output, padding=1, margin=1, color="green") -> None:
+def boxen_result(message, padding=1, margin=1, color="green") -> None:
     """Green result boxen"""
     print(
         boxen(
-            output,
+            message,
             padding=padding,
             margin=margin,
             color=color,
@@ -16,11 +16,23 @@ def boxen_result(output, padding=1, margin=1, color="green") -> None:
     )
 
 
-def boxen_info(info, padding=1, margin=1, color="blue") -> None:
+def boxen_info(message, padding=1, margin=1, color="blue") -> None:
     """Blue info boxen"""
     print(
         boxen(
-            info,
+            message,
+            padding=padding,
+            margin=margin,
+            color=color,
+        )
+    )
+
+
+def boxen_warn(message, padding=1, margin=1, color="red") -> None:
+    """Blue warning boxen"""
+    print(
+        boxen(
+            message,
             padding=padding,
             margin=margin,
             color=color,
