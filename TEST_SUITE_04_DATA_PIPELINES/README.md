@@ -1,3 +1,0 @@
-Placeholder...
-
-DTS for APIs with Pydantic
