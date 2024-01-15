@@ -1,10 +1,11 @@
-from django.test import TestCase
-from django.urls import reverse
 from http import HTTPStatus
-from accounts.forms import UserUpdateForm,ProfileUpdateForm
+
 from django.contrib.auth import get_user_model
 from django.http import HttpRequest
+from django.test import TestCase
+from django.urls import reverse
 
+from accounts.forms import ProfileUpdateForm, UserUpdateForm
 
 User=get_user_model()
 

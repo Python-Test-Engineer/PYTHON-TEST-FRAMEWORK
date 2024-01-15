@@ -1,5 +1,6 @@
 from libgravatar import Gravatar
 
+
 def create_avatar(email_address):
     g = Gravatar(email_address)
 

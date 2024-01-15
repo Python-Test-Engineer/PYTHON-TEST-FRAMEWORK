@@ -1,11 +1,12 @@
-from django.shortcuts import render,redirect
-from .forms import UserRegistrationForm
-from django.urls import reverse
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import authenticate,login,logout
-from posts.models import Post
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from .forms import UserUpdateForm,ProfileUpdateForm
+from django.contrib.auth.forms import AuthenticationForm
+from django.shortcuts import redirect, render
+from django.urls import reverse
+
+from posts.models import Post
+
+from .forms import ProfileUpdateForm, UserRegistrationForm, UserUpdateForm
 
 # Create your views here.
 

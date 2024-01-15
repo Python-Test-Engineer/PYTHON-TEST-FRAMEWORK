@@ -141,7 +141,18 @@ class Command(BaseCommand):
                 user=user.id,
                 rating=random.randint(1, 5),
             )
-
+        for _ in range(100):
+            Rating.objects.create(
+                restaurant=random.choice(restaurants),
+                user=2,
+                rating=random.randint(1, 5),
+            )
+        for _ in range(100):
+            Rating.objects.create(
+                restaurant=random.choice(restaurants),
+                user=3,
+                rating=random.randint(1, 5),
+            )
         # create some sales
         Sale.objects.all().delete()
         for _ in range(200):

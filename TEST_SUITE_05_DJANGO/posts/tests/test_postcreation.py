@@ -1,10 +1,12 @@
+from http import HTTPStatus
+
+from django.contrib.auth import get_user_model
+from django.http.request import HttpRequest
 from django.test import TestCase
 from django.urls import reverse
-from http import HTTPStatus
-from posts.forms import PostCreationForm
-from django.http.request import HttpRequest
 from model_bakery import baker
-from django.contrib.auth import get_user_model
+
+from posts.forms import PostCreationForm
 from posts.models import Post
 
 User = get_user_model()

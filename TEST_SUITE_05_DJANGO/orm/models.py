@@ -20,16 +20,17 @@ class Restaurant(models.Model):
         FASTFOOD = "FF", "Fast Food"
         OTHER = "OT", "Other"
 
-    name = models.CharField(
-        max_length=100, validators=[validate_restaurant_name_begins_with_a]
-    )
+    # name = models.CharField(
+    #     max_length=100, validators=[validate_restaurant_name_begins_with_a]
+    # )
+    name = models.CharField(max_length=100)
     website = models.URLField(default="")
     date_opened = models.DateField()
     latitude = models.FloatField(
-        validators=[MinValueValidator(-90), MaxValueValidator(90)]
+        default=0.0, validators=[MinValueValidator(-90), MaxValueValidator(90)]
     )
     longitude = models.FloatField(
-        validators=[MinValueValidator(-180), MaxValueValidator(180)]
+        default=0.0, validators=[MinValueValidator(-180), MaxValueValidator(180)]
     )
     restaurant_type = models.CharField(max_length=2, choices=TypeChoices.choices)
 
@@ -42,6 +43,7 @@ class Restaurant(models.Model):
 
 
 class Rating(models.Model):
+    # one restaurant can have many ratings but a rating can only have one restaurant
     user = models.PositiveIntegerField(default=1)
     restaurant = models.ForeignKey(
         Restaurant, on_delete=models.CASCADE, related_name="ratings"

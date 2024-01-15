@@ -1,9 +1,11 @@
+from http import HTTPStatus
+
+from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserCreationForm
 from django.test import TestCase
 from django.urls import reverse
-from http import HTTPStatus
-from django.contrib.auth.forms import UserCreationForm
+
 from accounts.forms import UserRegistrationForm
-from django.contrib.auth import get_user_model
 
 # Create your tests here.
 
