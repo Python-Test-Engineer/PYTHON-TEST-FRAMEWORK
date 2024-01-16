@@ -1,4 +1,4 @@
-"""The second video in the series.
+"""The third video in the series.
 Django-extensions runscript: https://django-extensions.readthedocs...
 Django filter(): https://docs.djangoproject.com/en/4.2...
 Django - Following Relations Backward: https://docs.djangoproject.com/en/4.2...
@@ -142,6 +142,6 @@ def run():
     # print(restaurant.sales.all())
     # pprint(connection.queries)
 
-    # restaurant = Restaurant.objects.last()
-    # print(Rating.objects.get_or_create(user=2, restaurant=restaurant, rating=1))
-    # # output is (<Rating: Rating: 1>, True) with True meaning it was created and not updated.
+    restaurant = Restaurant.objects.last()
+    print(Rating.objects.get_or_create(user=2, restaurant=restaurant, rating=1))
+    # output is (<Rating: Rating: 1>, True) with True meaning it was created and not updated.

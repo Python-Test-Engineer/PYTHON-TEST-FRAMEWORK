@@ -20,6 +20,7 @@ class Restaurant(models.Model):
         FASTFOOD = "FF", "Fast Food"
         OTHER = "OT", "Other"
 
+    # swap this out for below to restict to only the choices begining with a
     # name = models.CharField(
     #     max_length=100, validators=[validate_restaurant_name_begins_with_a]
     # )
