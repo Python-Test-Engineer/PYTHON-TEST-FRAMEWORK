@@ -39,7 +39,7 @@ class Restaurant(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        print(self._state.adding)
+        print(f"print out state from def save in model: {self._state.adding}")
         super().save(*args, **kwargs)
 
 
