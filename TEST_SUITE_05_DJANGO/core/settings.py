@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     "posts.apps.PostsConfig",
     "orm.apps.OrmConfig",
     "filemanager.apps.FilemanagerConfig",
-    "store.apps.StoreConfig",
     "django_extensions",
     # third party apps
 ]
