@@ -58,16 +58,16 @@ class Rating(models.Model):
 
 
 class Sale(models.Model):
-    restaurant = models.ForeignKey(
-        Restaurant, on_delete=models.SET_NULL, null=True, related_name="sales"
-    )
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.SET_NULL, null=True)
     income = models.DecimalField(max_digits=8, decimal_places=2)
     datetime = models.DateTimeField()
 
 
 class Staff(models.Model):
     name = models.CharField(max_length=100)
-    restaurant = models.ManyToManyField(Restaurant, through="StaffRestaurant")
+    restaurant = models.ManyToManyField(
+        Restaurant, through="StaffRestaurant", related_name="staff"
+    )
 
     class Meta:
         verbose_name_plural = "Staff"
@@ -78,7 +78,9 @@ class Staff(models.Model):
 
 class StaffRestaurant(models.Model):
     staff = models.ForeignKey(Staff, on_delete=models.CASCADE)
-    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    restaurant = models.ForeignKey(
+        Restaurant, on_delete=models.CASCADE, related_name="restaurants"
+    )
     salary = models.FloatField(default=10_000.00, null=True)
 
     class Meta:
