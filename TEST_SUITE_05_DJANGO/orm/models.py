@@ -63,3 +63,26 @@ class Sale(models.Model):
     )
     income = models.DecimalField(max_digits=8, decimal_places=2)
     datetime = models.DateTimeField()
+
+
+class Staff(models.Model):
+    name = models.CharField(max_length=100)
+    restaurant = models.ManyToManyField(Restaurant, through="StaffRestaurant")
+
+    class Meta:
+        verbose_name_plural = "Staff"
+
+    def __str__(self):
+        return self.name
+
+
+class StaffRestaurant(models.Model):
+    staff = models.ForeignKey(Staff, on_delete=models.CASCADE)
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    salary = models.FloatField(default=10_000.00, null=True)
+
+    class Meta:
+        verbose_name_plural = "Staff Restaurant"
+
+    def __str__(self):
+        return f"{self.staff} - {self.restaurant} - {self.salary}"
