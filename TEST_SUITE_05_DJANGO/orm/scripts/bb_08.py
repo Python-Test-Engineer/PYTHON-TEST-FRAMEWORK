@@ -39,7 +39,9 @@ def run():
     #     Restaurant.objects.all()[:10],
     #     through_defaults={"salary": lambda: random.randint(10_000, 50_000)},
     # )
-    s = StaffRestaurant.objects.prefetch_related("staff", "restaurant")
+    s = StaffRestaurant.objects.prefetch_related(
+        "staff", "restaurant"
+    )  # avoid n+1 queries
     print(s)
     print("\n")
     print(Fore.YELLOW + str(connection.queries))
